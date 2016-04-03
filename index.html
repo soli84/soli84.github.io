@@ -10,7 +10,10 @@
   ga('send', 'pageview');
 
 </script>
- <head>
+  <head>
+
+
+ 
    <title>Alexey Solovey</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -18,6 +21,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Delius+Swash+Caps' rel='stylesheet' type='text/css'>
+  
+   <script>
+$(document).ready(function(){
+    $("#losha").click(function(){
+        $("#pic").slideDown("slow");
+    });
+});
+</script>
+  
+  
+  
+  
+  
+  
   </head>
 <style>
  
@@ -64,8 +81,67 @@ h1 {
   letter-spacing: 10px;
 }
 
+img:hover{ border: 2px outset rgba(0, 0, 0, 0.9);
+  background: rgba(0,0,0, 0.9);
+  transform:scale(1.1);
+  transition: 0.2s;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 20);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  letter-spacing: 10px;}
+
+.left{
+margin-left:25%;
+position: relative;
+}
+
+.right{
+position: relative;
+margin-right:25%
+}
+#pic{
+display: none;
+
+}
+	
+/* Make the image fit the box */
+
+#sol {
+    margin:2px;
+	margin-left:10px;
+    width: 49%;
+    border: 1px solid #8a4419;
+    border-style: inset;
+	float: left;
+	
+}
+
+#boxshadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1; /* hide shadow behind image */
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
+    width: 70%; 
+    left: 15%; /* one half of the remaining 30% */
+    height: 100px;
+    bottom: 0;}
+	
+
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+
 
 </style>
+
+
+
 
 <body>
 <div class="container-fluid">
@@ -88,7 +164,7 @@ h1 {
                                 <a href="https://www.facebook.com/losha.so" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> <span class="network-name">Facebook</span></a>
                             </li>
 			   <li>
-                                <a href="secondPage.html" target="_self" class="btn btn-default btn-lg"><i class="fa fa-code"></i><span class="network-name">Projects</span></a>
+                                <a target="_self" class="btn btn-default btn-lg"><i class="fa fa-code"></i><span class="network-name"id="losha">Projects</span></a>
                             </li>
                             <li>
                                 <a href="mailto:alexey@alexeysolovey.com" target="_blank" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-send"></i> <span class="network-name">Contact</span></a>
@@ -98,13 +174,24 @@ h1 {
                            
 							
                         </ul>
-                    </div>
-  
-    
+                  
 
 </div>
 
- 
+  <div id="pic" class="container gralpadd">
+		   
+		    <div class="row">
+		      <div class="col-md-3 dl1 left">
+		        <a href="https://play.google.com/store/apps/details?id=com.soli.finalproject" target="_blank" class="thumbnail">
+		          <img src="places.jpg" alt="..." class="img-responsive">
+		        </a>
+		      </div>
+		      <div class="col-md-3 dl1 right">
+		        <a href="https://play.google.com/store/apps/details?id=air.com.lalila.tapthenote"target="_blank" class="thumbnail">
+		          <img src="note.jpg"alt="..." class="img-responsive">
+		     </a>
+		    </div>
+		  </div>
 
 </body>
 </html>
